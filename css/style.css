@@ -1,0 +1,16 @@
+.hide {
+    display: none;
+  }
+  .map-container {
+    text-align: center;
+    padding: 50px 0;
+  }
+  .centered-y p{
+    background-color: transparent;
+    border-radius: 25px;
+    padding: 7px 10px;
+    margin: 0;
+  }
+  .map-container button{
+    margin-right: 25px;
+  }

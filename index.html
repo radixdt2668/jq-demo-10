@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jq-demo-10</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <div class="map-container">
+        <div class="inner-basic division-map div-toggle" data-target=".division-details" id="divisiondetail">
+          <button class="map-point-sm" data-show=".darwin">
+            <div class="content">
+              <div class="centered-y">
+                <p>Water-fall</p>
+              </div>
+            </div>
+          </button>
+          <button class="map-point-sm" data-show=".ptown">
+            <div class="content">
+              <div class="centered-y">
+                <p>Foggy atmosphere</p>
+              </div>
+            </div>
+          </button>
+          <button class="map-point-sm" data-show=".philly">
+            <div class="content">
+              <div class="centered-y">
+                <p>River</p>
+              </div>
+            </div>
+          </button>
+          <button class="map-point-sm" data-show=".dela">
+            <div class="content">
+              <div class="centered-y">
+                <p>Nature</p>
+              </div>
+            </div>
+          </button>
+        </div><!-- end inner basic -->
+      </div>      
+      <div class="map-container">
+        <div class="inner-basic division-details">
+          <div class="dela hide">
+            <img src="./images/a-1.jpg" alt="image-1" height="400" width="400">
+          </div>
+          <div class="darwin hide">
+            <img src="./images/w-fall.jpg" alt="image-1" height="400" width="400">
+
+          </div>
+          <div class="ptown hide">
+            <img src="./images/foggy.jpg" alt="image-1" height="400" width="400">
+
+          </div>
+          <div class="philly hide">
+            <img src="./images/river.jpg" alt="image-1" height="400" width="400">
+          </div>
+         
+        </div>
+      </div>
+      <script>
+        $(document).on('click', '.map-point-sm', function() {
+  var show = $(this).data('show');
+  $(show).removeClass("hide").siblings().addClass("hide");
+});
+
+      </script>
+</body>
+</html>
